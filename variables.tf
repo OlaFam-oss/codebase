@@ -21,3 +21,8 @@ variable "ec2_key_name" {
   type        = string
   default     = "test_keypair"
 }
+
+variable "bucket" {}
+variable "key" {}
+
+  
