@@ -1,5 +1,5 @@
 resource "aws_security_group" "ec2_sg" {
-  name        = "ec2_sg"
+  name        = var.sg_name
   description = "Allow http and ssh traffic"
   vpc_id      = "vpc-0005bae46051f5692"
 

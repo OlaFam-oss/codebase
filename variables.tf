@@ -28,5 +28,5 @@ variable "instance_names" {
 
 variable "bucket" {}
 variable "key" {}
-
+variable "sg_name" {}
   
