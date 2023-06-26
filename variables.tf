@@ -22,6 +22,10 @@ variable "ec2_key_name" {
   default     = "test_keypair"
 }
 
+variable "instance_names" {
+  default = ["amazon_linux 1", "amazon_linux 2"]
+}
+
 variable "bucket" {}
 variable "key" {}
 

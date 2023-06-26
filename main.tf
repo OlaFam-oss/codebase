@@ -21,12 +21,12 @@ resource "aws_instance" "amazon_linux" {
   key_name          = var.ec2_key_name
   security_groups   = [aws_security_group.ec2_sg.name]
   availability_zone = "eu-west-1a"
-  count             = var.ec2_ami
   user_data         = <<-EOF
     #!/bin/bash
     yum install java-1.8.0-amazon-corretto-devel.x86_64 git maven -y
      EOF
+  count             = 2
   tags = {
-    Name = "amazon_linux"
+    Name = var.instance_names[count.index]
   }
 }
